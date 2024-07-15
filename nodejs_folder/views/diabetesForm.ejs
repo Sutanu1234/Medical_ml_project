@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <a href="/" class="btn btn-secondary mb-3">Back</a>
+        <h1 class="text-center">Diabetes Prediction</h1>
+        <form action="/predict" method="POST" class="mt-4">
+            <div class="form-group">
+                <label for="pregnancies">Pregnancies:</label>
+                <input type="number" class="form-control" name="pregnancies" placeholder="Enter number of pregnancies" required>
+            </div>
+            <div class="form-group">
+                <label for="glucose">Glucose:</label>
+                <input type="number" class="form-control" name="glucose" placeholder="Enter glucose level" required>
+            </div>
+            <div class="form-group">
+                <label for="blood_pressure">Blood Pressure:</label>
+                <input type="number" class="form-control" name="blood_pressure" placeholder="Enter blood pressure" required>
+            </div>
+            <div class="form-group">
+                <label for="skin_thickness">Skin Thickness:</label>
+                <input type="number" class="form-control" name="skin_thickness" placeholder="Enter skin thickness" required>
+            </div>
+            <div class="form-group">
+                <label for="insulin">Insulin:</label>
+                <input type="number" class="form-control" name="insulin" placeholder="Enter insulin level" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" class="form-control" name="bmi" step="0.1" placeholder="Enter BMI" required>
+            </div>
+            <div class="form-group">
+                <label for="diabetes_pedigree">Diabetes Pedigree:</label>
+                <input type="number" class="form-control" name="diabetes_pedigree" step="0.001" placeholder="Enter diabetes pedigree function" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" name="age" placeholder="Enter age" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
